@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Login 10</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link href={Routes.static_path(@conn, "/session_assets/css/style.css")}  rel="stylesheet">
+
+	</head>
+	<body class="img js-fullheight" style="background-image: url(/session_assets/images/bg.jpg);">
+	  <main>
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+    <%= @inner_content %>
+  </main><!-- End #main -->
+
+  <script src={Routes.static_path(@conn, "/session_assets/js/jquery.min.js")}></script>
+  <script src={Routes.static_path(@conn, "/session_assets/js/popper.js")}></script>
+  <script src={Routes.static_path(@conn, "/session_assets/js/bootstrap.min.js")}></script>
+  <script src={Routes.static_path(@conn, "/session_assets/js/main.js")}></script>
+
+	</body>
+</html>
+
